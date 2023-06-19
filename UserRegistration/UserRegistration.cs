@@ -95,5 +95,26 @@ namespace Regex_UserRegistration
                 Console.ResetColor();
             }
         }
+        //UC5 PassWord Rule-1
+        public void ValidPasswordRule1()
+        {
+            Console.WriteLine("Please Enter Password Rule 1");
+            string data = Console.ReadLine();
+            string pattern = "^[a-zA-Z]{8,}$";
+
+            Regex regobj = new Regex(pattern);
+            if (regobj.IsMatch(data))
+            {
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine("Password Rule 1 is Valid");
+                Console.ResetColor();
+            }
+            else
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("Password Rule 1 Is Invalid");
+                Console.ResetColor();
+            }
+        }
     }
 }
