@@ -11,7 +11,7 @@ namespace REGEX_UserRegistration
             Console.WriteLine("Welcome to REGEX User Registration Problem");
 
             Console.WriteLine("Select Options Please :\n" +
-                "1)Enter First Name\n");
+                "1)Enter First Name\n2)Enter Last Name");
 
             int option = Convert.ToInt32(Console.ReadLine());
 
