@@ -11,22 +11,27 @@ namespace REGEX_UserRegistration
             Console.WriteLine("Welcome to REGEX User Registration Problem");
 
             Console.WriteLine("Select Options Please :\n" +
-                "1)Enter First Name\n2)Enter Last Name");
+                "1)Enter First Name\n2)Enter Last Name\n3)Enter Email\n");
 
             int option = Convert.ToInt32(Console.ReadLine());
-
+            UserRegistration user = new UserRegistration();
             switch (option)
             {
                 case 1:
-
-                    UserRegistration user = new UserRegistration();
                     user.ValidFirstName();
                     break;
-
+                case 2:
+                    user.ValidLastName();
+                    break;
+                case 3:
+                    user.ValidEmail();
+                    break;
                 default:
                     Console.WriteLine("Choose Proper options");
                     break;
             }
         }
+            
+        
     }
 }
