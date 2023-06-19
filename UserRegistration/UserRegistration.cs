@@ -138,7 +138,7 @@ namespace Regex_UserRegistration
             }
         }
         //UC7 PassWord Rule-3
-        public void ValidPasswordRule2()
+        public void ValidPasswordRule3()
         {
             Console.WriteLine("Please Enter Password Rule 3");
             string data = Console.ReadLine();
@@ -155,6 +155,27 @@ namespace Regex_UserRegistration
             {
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("Password Rule 3 Is Invalid");
+                Console.ResetColor();
+            }
+        }
+        //UC8 PassWord Rule-4
+        public void ValidPasswordRule4()
+        {
+            Console.WriteLine("Please Enter Password Rule 4");
+            string data = Console.ReadLine();
+            string pattern = "^(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&~*_+]{1})[a-zA-Z]{8,}$";
+
+            Regex regobj = new Regex(pattern);
+            if (regobj.IsMatch(data))
+            {
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine("Password Rule 4 is Valid");
+                Console.ResetColor();
+            }
+            else
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("Password Rule 4 Is Invalid");
                 Console.ResetColor();
             }
         }

@@ -12,7 +12,7 @@ namespace REGEX_UserRegistration
 
             Console.WriteLine("Select Options Please :\n" +
                 "1)Enter First Name\n2)Enter Last Name\n3)Enter Email\n4)Phone Number\n5)Password Rule1" +
-                "\n6)Password Rule2\n7)Password Rule3");
+                "\n6)Password Rule2\n7)Password Rule3\n8)Password Rule4");
 
             int option = Convert.ToInt32(Console.ReadLine());
             UserRegistration user = new UserRegistration();
@@ -38,6 +38,9 @@ namespace REGEX_UserRegistration
                     break;
                 case 7:
                     user.ValidPasswordRule3();
+                    break;
+                case 8:
+                    user.ValidPasswordRule4();
                     break;
                 default:
                     Console.WriteLine("Choose Proper options");
