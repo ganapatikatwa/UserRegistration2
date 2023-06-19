@@ -74,5 +74,26 @@ namespace Regex_UserRegistration
                 Console.ResetColor();
             }
         }
+        //UC4 Email
+        public void ValidPhNumber()
+        {
+            Console.WriteLine("Please Enter Mobile Number");
+            string data = Console.ReadLine();
+            string pattern = "^[0-9]{2}[ ]{1}[6-9]{1}[0-9]{9}$";
+
+            Regex regobj = new Regex(pattern);
+            if (regobj.IsMatch(data))
+            {
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine("Mobile Number is Valid");
+                Console.ResetColor();
+            }
+            else
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("Mobile Number Is Invalid");
+                Console.ResetColor();
+            }
+        }
     }
 }
