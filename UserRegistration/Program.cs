@@ -1,5 +1,6 @@
 ﻿using Regex_UserRegistration;
 using System;
+using System.Text.RegularExpressions;
 
 namespace REGEX_UserRegistration
 {
@@ -12,7 +13,7 @@ namespace REGEX_UserRegistration
 
             Console.WriteLine("Select Options Please :\n" +
                 "1)Enter First Name\n2)Enter Last Name\n3)Enter Email\n4)Phone Number\n5)Password Rule1" +
-                "\n6)Password Rule2\n7)Password Rule3\n8)Password Rule4");
+                "\n6)Password Rule2\n7)Password Rule3\n8)Password Rule4\n9)Sample E Mails");
 
             int option = Convert.ToInt32(Console.ReadLine());
             UserRegistration user = new UserRegistration();
@@ -42,12 +43,16 @@ namespace REGEX_UserRegistration
                 case 8:
                     user.ValidPasswordRule4();
                     break;
+                case 9:
+                    user.ValidSampleEmail();
+                    break;
                 default:
                     Console.WriteLine("Choose Proper options");
                     break;
             }
         }
-            
         
+
+
     }
 }
